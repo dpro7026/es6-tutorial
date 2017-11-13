@@ -54,5 +54,66 @@
 
 // Arrow functions (Anonymous fucntion)
 {
-  // () => {};  
+  setTimeout( () => {
+    console.log('3...2...1... Blastoff!');
+  }, 1000);
+}
+
+//Map method
+{
+  let points = [10, 20, 30];
+
+  let increment = (element) => {
+    return element + 1;
+  }
+
+  points = points.map(increment);
+
+  console.log(points);
+
+  // or can eneter anonymous function as an argument
+  points = points.map(element => {
+    return element + 1;
+  });
+
+  console.log(points);
+
+  //or even shorter syntax
+  points = points.map(element => element + 1);
+
+  console.log(points);
+
+  let lengths = [3, 7, 5];
+  let multiple = 8;
+
+  const scale = (multiple) => {
+    lengths = lengths.map(element => element * multiple);
+    return lengths
+  };
+
+  console.log(scale(multiple));
+}
+
+// Filter method
+{
+  let isPassing = (grade) => {
+    return grade >= 50;
+  }
+
+  let scores = [45, 50, 70];
+
+  let passing = scores.filter(isPassing);
+
+  console.log(passing);
+
+  //or shorter syntax
+  let shorterPassing = scores.filter(grade => grade >=50);
+  console.log(shorterPassing);
+}
+
+//Find method - returns the first element meeting the condition.
+// I.e. does the array contain this value
+{
+  let targets = [1, 2, 3, 4];
+  console.log(targets.find(values => values == 2));
 }
