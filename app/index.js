@@ -1,3 +1,13 @@
+// Importing modules
+import { pokemon, types } from './pokemon'
+import EvolvedPokemon from './class-extends'
+console.log(pokemon);
+console.log(types);
+
+import { add } from './pokemon'
+import multiply from './pokemon'
+console.log('Total = ', add(3, 5));
+
 // Template literal strings
 {
   let a = 'hello';
@@ -5,7 +15,6 @@
   let c = `${a} ${b}`
   console.log(c);
 }
-
 
 // Spread operator
 {
@@ -116,4 +125,11 @@
 {
   let targets = [1, 2, 3, 4];
   console.log(targets.find(values => values == 2));
+}
+
+// Classes
+{
+  let charizard = new EvolvedPokemon('Charizard', 100, 3);
+  charizard.attack();
+  console.log(charizard.canEvolveAgain());
 }
